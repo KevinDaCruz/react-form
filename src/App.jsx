@@ -5,6 +5,7 @@ function App() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -17,6 +18,7 @@ function App() {
 
   const onSubmit = (data) => {
     console.log("Tâche soumise :", data);
+    reset();
   };
 
   return (
